@@ -15,6 +15,9 @@ public class User {
     @ManyToMany
     private Set<Role> roles;
 
+    @Transient
+    private String passwordConfirm;
+
     public Long getId() {
         return id;
     }
@@ -45,5 +48,13 @@ public class User {
 
     public void setRoles(Set<Role> roles) {
         this.roles = roles;
+    }
+
+    public String getPasswordConfirm() {
+        return passwordConfirm;
+    }
+
+    public void setPasswordConfirm(String passwordConfirm) {
+        this.passwordConfirm = passwordConfirm;
     }
 }
